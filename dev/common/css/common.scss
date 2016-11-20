@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+//-----      import of parts      --------
+	@import "_parts/header";
+	@import "_parts/footer";
+	@import "_parts/glonav";
+//-----  end of import of parts   --------
+//-----        common style       --------
+body{
+	min-width:1200px;
+}
+.inner{
+	width:1200px;
+	margin: 0 auto;
+}
+#main{
+	
+}
+#content{
+	width:936px;
+	margin:0 0 0 264px;
+}
+//-----    end of common style    --------

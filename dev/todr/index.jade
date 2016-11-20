@@ -1,30 +1,30 @@
-extends ./common/jade/template
+extends ../common/jade/template
 block metas
-	-var title = "不思議の幻想郷 Tower Of Desire 攻略サイト"
+	-var title = "不思議の幻想郷 Tower Of Desire RELOADED 攻略サイト"
 	-var groop = "Sites"
-	-var current = "Tod"
+	-var current = "TodR"
 	-var description = ""
 	-var keyword = ""
 	-var og_name = ""
 	-var og_title = ""
 	-var og_url = ""
 	-var og_description = ""
-	-var dir_root = "./"
+	-var dir_root = "../"
 	-var css = "./css/index.css"
 block js
 	script(rel="text/javascript",src="./js/index.min.js")
 block content
-	-var imgPath = dir_root+"images/tod/"
+	-var imgPath = dir_root+"images/todr/"
 	#banner
 		.sitebanner
-			a(href="http://www.aquastyle.org/fusgigen_tod/",target="_blank")
-				img(src=imgPath+"tod_banner.jpg",alt="不思議の幻想郷TowerOfDesire")
+			a(href="http://www.aquastyle.org/fushigentod_r/",target="_blank")
+				img(src=imgPath + "todr_banner.jpg",alt="不思議の幻想郷TowerOfDesire")
 	#descirption
 		h2.description__title.
 			はじめに
 		p.description__text.
-			このページは #{title} の攻略サイトになります。<br>
-			現状<a href="http://fusigentod.dojin.com/pukiwiki/index.php?FrontPage" target="_blank">TOD攻略wiki</a>が存在しますが、<br>
+			このページは #{title} になります。<br>
+			現状<a href="http://fusigentod.dojin.com/todr/index.php" target="_blank">TODR攻略wiki</a>が存在しますが、<br>
 			それに対してこちらのページは簡潔に必要な部分のみを記載するサイトです。<br>
 			交流を求める場合にはwikiのほうがよろしいかとおもいます。
 	#update
@@ -40,6 +40,6 @@ block content
 			-update[5] = "2016/12/06 ページを公開しました"
 			-update[6] = "2016/12/07 ページを公開しました"
 			-for(var i = update.length - 1; i > -1;i--){
-				li.list
-					p.text #{update[i]}
+			li.list
+				p.text #{update[i]}
 			-}

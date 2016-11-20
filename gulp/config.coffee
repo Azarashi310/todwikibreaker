@@ -10,14 +10,15 @@ module.exports =
 	jade:
 		src: [
 			src + '**/*.jade',
-			'!' + src + '**/common/**.jade'
+			'!' + src + '**/common/jade/*.jade'
 		]
 		dest: dest
 		opt:
 			pretty: true
 	style:
 		src: [
-			src + '**/*.scss'
+			src + '**/*.scss',
+			'!' + src + '**/css/_parts/*.scss'
 		]
 		dest: dest
 		autoprefixer_opt:
@@ -53,6 +54,6 @@ module.exports =
 	watch:
 		pass:
 			jade: src + '**/*.jade'
-			jade_tmp: src + '**/common/*.jade'
+			jade_tmp: src + '**/common/jade/*.jade'
 			style: src + '**/*.scss'
-			webpack: src + '**/js/**'
+			webpack: src + '**/js/**/*.coffee'
