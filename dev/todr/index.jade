@@ -1,6 +1,7 @@
 extends ../common/jade/template
 block metas
 	-var title = "不思議の幻想郷 Tower Of Desire RELOADED 攻略サイト"
+	-var pagetitle = "不思議の幻想郷 Tower Of Desire RELOADED 攻略サイト"
 	-var groop = "Sites"
 	-var current = "TodR"
 	-var description = ""
@@ -9,10 +10,11 @@ block metas
 	-var og_title = ""
 	-var og_url = ""
 	-var og_description = ""
+	-var groop_root = "./"
 	-var dir_root = "../"
-	-var css = "./css/index.css"
+	-var css = "todr.css"
 block js
-	script(rel="text/javascript",src="./js/index.min.js")
+
 block content
 	-var imgPath = dir_root+"images/todr/"
 	#banner
@@ -24,7 +26,7 @@ block content
 			はじめに
 		p.description__text.
 			このページは #{title} になります。<br>
-			現状<a href="http://fusigentod.dojin.com/todr/index.php" target="_blank">TODR攻略wiki</a>が存在しますが、<br>
+			現状<a class="link" href="http://fusigentod.dojin.com/todr/index.php" target="_blank">TODR攻略wiki</a>が存在しますが、<br>
 			それに対してこちらのページは簡潔に必要な部分のみを記載するサイトです。<br>
 			交流を求める場合にはwikiのほうがよろしいかとおもいます。
 	#update

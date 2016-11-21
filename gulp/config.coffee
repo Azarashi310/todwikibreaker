@@ -18,7 +18,8 @@ module.exports =
 	style:
 		src: [
 			src + '**/*.scss',
-			'!' + src + '**/css/_parts/*.scss'
+			'!' + src + '**/css/**/_parts/*.scss',
+			'!' + src + '**/css/_pages/**/*.scss'
 		]
 		dest: dest
 		autoprefixer_opt:
@@ -36,7 +37,7 @@ module.exports =
 		src: src + '**/js/**'
 		dest: dest
 		entry:
-			"js/index":src+"js/index"
+			"common/js/common":src+"common/js/common"
 		output:
 			publicPath : dest
 			filename : "[name].min.js"
@@ -55,5 +56,5 @@ module.exports =
 		pass:
 			jade: src + '**/*.jade'
 			jade_tmp: src + '**/common/jade/*.jade'
-			style: src + '**/*.scss'
+			style: src + '**/**/*.scss'
 			webpack: src + '**/js/**/*.coffee'

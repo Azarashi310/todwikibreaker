@@ -1,5 +1,6 @@
 block metas
 	-var title = ""
+	-var pagetitle = ""
 	-var groop = ""
 	-var current = ""
 	-var description = ""
@@ -9,7 +10,8 @@ block metas
 	-var og_url = ""
 	-var og_description = ""
 	-var dir_root = "./"
-	-var css = "./css/index.css"
+	-var groop_root = ""
+	-var css = ""
 doctype
 html(lang="ja")
 	head
@@ -18,7 +20,7 @@ html(lang="ja")
 		meta(http-equiv='content-language', content='ja')
 		meta(http-equiv='Content-Script-Type', content='text/javascript')
 		meta(http-equiv='Content-Style-Type', content='text/css')
-		title #{title}
+		title #{pagetitle}
 		meta(name="description" content="#{description}")
 		meta(name="keywords" content="#{keyword}")
 		meta(property="og:site_name" content!="#{og_name}")
@@ -28,16 +30,17 @@ html(lang="ja")
 		meta(property="og:images" content!="http://beerweek.jp/2016/images/ogp_img.jpg")
 		meta(property="og:type" content!="article")
 		meta(property="og:locale" content!="ja_JP")
-		link(rel="stylesheet" type="text/css" href="#{css}" media="all")
+		link(rel="stylesheet" type="text/css" href="#{groop_root}css/#{css}" media="all")
 		link(rel="stylesheet" type="text/css" href="#{dir_root}common/css/common.css" media="all")
 		link(rel="stylesheet" type="text/css" href="#{dir_root}common/css/reset.css" media="all")
 		script(rel="text/javascript",src="#{dir_root}common/js/lib.js")
+		script(rel="text/javascript",src="#{dir_root}common/js/common.min.js")
 		block js
 	body
 		#header
 			h1.title.
 				#{title}
-		#main
+		#main(class=groop)
 			.inner
 				#globalnav
 					.glovalnav__inner
@@ -50,7 +53,7 @@ html(lang="ja")
 						h2.menutitle.accordion(class=groop == 'Base' ? 'active' : '') 基礎知識
 						ul.globalnav__menus(class=groop == 'Base' ? 'active' : '')
 							li.list(class=current == 'Changed' ? 'active' : '')
-								a.link(href="#") 不思議の幻想郷3からの変更点
+								a.link(href="#{groop_root}/base/changed/") 不思議の幻想郷3からの変更点
 							li.list(class=current == 'Fusion' ? 'active' : '')
 								a.link(href="#{dir_root}") ニトフュージョン
 						h2.menutitle.accordion(class=groop == 'System' ? 'active' : '') システム
@@ -77,8 +80,8 @@ html(lang="ja")
 								a.link(href="#{dir_root}") 値段一覧表
 							li.list(class=current == 'Condition' ? 'active' : '')
 								a.link(href="#{dir_root}") 状態異常
-						h2.menutitle.accordion(class=groop == 'facility' ? 'active' : '') 施設
-						ul.globalnav__menus(class=groop == 'facility' ? 'active' : '')
+						h2.menutitle.accordion(class=groop == 'Facility' ? 'active' : '') 施設
+						ul.globalnav__menus(class=groop == 'Facility' ? 'active' : '')
 							li.list(class=current == 'HakureiShrine' ? 'active' : '')
 								a.link(href="#") 博麗神社
 							li.list(class=current == 'KasenDojo' ? 'active' : '')
@@ -93,22 +96,24 @@ html(lang="ja")
 								a.link(href="#{dir_root}") 神霊廟の地下蔵
 							li.list(class=current == 'StrongholdOfSyokaitengu' ? 'active' : '')
 								a.link(href="#{dir_root}") 哨戒天狗の詰所
-						h2.menutitle.accordion ダンジョン
-						ul.globalnav__menus
-							li.list
+						h2.menutitle.accordion(class=groop == 'Dungeon' ? 'active' : '') ダンジョン
+						ul.globalnav__menus(class=groop == 'Dungeon' ? 'active' : '')
+							li.list(class=current == 'MainStory' ? 'active' : '')
 								a.link(href="#") メインストーリー
-							li.list
+							li.list(class=current == 'KasenDojoStory' ? 'active' : '')
 								a.link(href="#{dir_root}") 華扇道場
-							li.list
+							li.list(class=current == 'WatatsukiBunnyLandStory' ? 'active' : '')
 								a.link(href="#{dir_root}") 綿月バニーランド
-							li.list
+							li.list(class=current == 'TokkyuGyokutoYouseijoStory' ? 'active' : '')
 								a.link(href="#{dir_root}") 特級玉兎養成場
-							li.list
+							li.list(class=current == 'OtherStory' ? 'active' : '')
 								a.link(href="#{dir_root}") その他
-							li.list
+							li.list(class=current == 'FutoRenStory' ? 'active' : '')
 								a.link(href="#{dir_root}") ふとれん
-							li.list
+							li.list(class=current == 'TheBulletReporterStory' ? 'active' : '')
 								a.link(href="#{dir_root}") ザ・バレットリポーター
 				#content
 					block content
+				#index
+					h2.index__title 目次
 		#footer

@@ -1,6 +1,7 @@
 extends ./common/jade/template
 block metas
 	-var title = "不思議の幻想郷 Tower Of Desire 攻略サイト"
+	-var pagetitle = "不思議の幻想郷 Tower Of Desire 攻略サイト"
 	-var groop = "Sites"
 	-var current = "Tod"
 	-var description = ""
@@ -10,24 +11,26 @@ block metas
 	-var og_url = ""
 	-var og_description = ""
 	-var dir_root = "./"
-	-var css = "./css/index.css"
+	-var groop_root = "./"
+	-var css = "tod.css"
 block js
-	script(rel="text/javascript",src="./js/index.min.js")
+
 block content
 	-var imgPath = dir_root+"images/tod/"
+
 	#banner
 		.sitebanner
 			a(href="http://www.aquastyle.org/fusgigen_tod/",target="_blank")
 				img(src=imgPath+"tod_banner.jpg",alt="不思議の幻想郷TowerOfDesire")
-	#descirption
+	section#descirption
 		h2.description__title.
 			はじめに
 		p.description__text.
-			このページは #{title} の攻略サイトになります。<br>
-			現状<a href="http://fusigentod.dojin.com/pukiwiki/index.php?FrontPage" target="_blank">TOD攻略wiki</a>が存在しますが、<br>
+			このページは #{title} になります。<br>
+			現状<a class="link" href="http://fusigentod.dojin.com/pukiwiki/index.php?FrontPage" target="_blank">TOD攻略wiki</a>が存在しますが、<br>
 			それに対してこちらのページは簡潔に必要な部分のみを記載するサイトです。<br>
 			交流を求める場合にはwikiのほうがよろしいかとおもいます。
-	#update
+	section#update
 		h2.update__title.
 			更新履歴
 		ul.update__lists
