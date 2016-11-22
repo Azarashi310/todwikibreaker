@@ -9,8 +9,40 @@
 				margin:0 0 20px 0;
 			}
 			.subhead{
-				font-size: 14px;
+				font-size: 16px;
 				letter-spacing: 0.06em;
+				text-align: center;
+				padding:0 0 20px 0;
+			}
+			table{
+				width:400px;
+				margin:0 auto;
+				border:solid 1px #444;
+				th{
+					background-color: #444;
+					text-align: center;
+					color: #ffffff;
+					font-size:14px;
+					line-height: 20px;
+				}
+				td{
+					text-align: center;
+					font-size :14px;
+					border-right:1px solid #444;
+					border-bottom:1px solid #444;
+					color: #000;
+					line-height: 30px;
+					width:50%;
+					&.left{
+						background-color: #b6d2eb;
+					}
+					&.right{
+						background-color: #9cff31;
+					}
+					&:last-child{
+						border-right: none;
+					}
+				}
 			}
 		}
 	}
