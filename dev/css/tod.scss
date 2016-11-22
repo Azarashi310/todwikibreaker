@@ -1,7 +1,8 @@
 @charset "utf-8";
 
-//-----         import of pages        -----
-	#main{
+//-----         import of group        -----
+	#main {
 		@import "_pages/top";
+		@import "_pages/_base/base";
 	}
-//-----     end of import of pages     -----
+//-----     end of import of group     -----
