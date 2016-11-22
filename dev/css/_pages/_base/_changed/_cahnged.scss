@@ -1,5 +1,6 @@
 //-----         import of parts        -----
 &.Changed{
-	//@import "";
+	@import "./_parts/title";
+	@import "./_parts/commentary";
 }
 //-----     end of import of parts     -----
