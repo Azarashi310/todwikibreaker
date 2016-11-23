@@ -1,5 +1,6 @@
 #commentary{
 	.changedlists{
+		list-style: none;
 		.list{
 			.title{
 				text-align: center;
@@ -14,33 +15,57 @@
 				text-align: center;
 				padding:0 0 20px 0;
 			}
-			table{
-				width:400px;
+			.content{//commonStyle
+				width:550px;
 				margin:0 auto;
-				border:solid 1px #444;
-				th{
-					background-color: #444;
-					text-align: center;
-					color: #ffffff;
-					font-size:14px;
-					line-height: 20px;
+			}
+			&.system{
+				.lists{
+					list-style: none;
+					padding:0 0 20px 0;
+					.list{
+						position: relative;
+						margin:0 0 0 1em;
+						.text{
+							line-height: 1.6;
+							letter-spacing: 0.02em
+						}
+						span{
+							margin:0 0 0 -1em;
+							position: absolute;
+						}
+					}
 				}
-				td{
-					text-align: center;
-					font-size :14px;
-					border-right:1px solid #444;
-					border-bottom:1px solid #444;
-					color: #000;
-					line-height: 30px;
-					width:50%;
-					&.left{
-						background-color: #b6d2eb;
+			}
+			&.item{
+				table{
+					width:550px;
+					margin:0 auto;
+					border:solid 1px #444;
+					th{
+						background-color: #444;
+						text-align: center;
+						color: #ffffff;
+						font-size:14px;
+						line-height: 20px;
 					}
-					&.right{
-						background-color: #9cff31;
-					}
-					&:last-child{
-						border-right: none;
+					td{
+						text-align: center;
+						font-size :14px;
+						border-right:1px solid #444;
+						border-bottom:1px solid #444;
+						color: #000;
+						line-height: 30px;
+						width:50%;
+						&.left{
+							background-color: #b6d2eb;
+						}
+						&.right{
+							background-color: #9cff31;
+						}
+						&:last-child{
+							border-right: none;
+						}
 					}
 				}
 			}
