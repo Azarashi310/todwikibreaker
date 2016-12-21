@@ -1,0 +1,49 @@
+#commentary{
+	.changedlists{
+		list-style: none;
+		.list{
+			.title{
+				text-align: center;
+				background-color: #444444;
+				color: #fff;
+				line-height: 30px;
+			}
+			.subhead{
+				font-size: 16px;
+				letter-spacing: 0.06em;
+				text-align: center;
+				padding:20px 0 20px 0;
+			}
+			.content{//commonStyle
+				width:550px;
+				margin:0 auto;
+			}
+			&.system{
+				.description{
+					text-align: center;
+					line-height: 1.5;
+					letter-spacing: 0.02em;
+					margin: 0 0 20px 0;
+				}
+
+			}
+			&.about{
+				.description{
+					text-align: center;
+					line-height: 1.5;
+					letter-spacing: 0.02em;
+					span{
+						display: inline-block;
+					}
+				}
+			}
+			&.synthesis{
+				.description{
+					text-align: center;
+					line-height: 1.5;
+					letter-spacing: 0.02em;
+				}
+			}
+		}
+	}
+}
