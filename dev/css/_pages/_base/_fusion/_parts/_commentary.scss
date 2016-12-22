@@ -18,12 +18,15 @@
 				width:550px;
 				margin:0 auto;
 			}
+			.description{
+				margin: 0 0 20px 0;
+				line-height: 1.5;
+			}
 			&.system{
 				.description{
 					text-align: center;
 					line-height: 1.5;
 					letter-spacing: 0.02em;
-					margin: 0 0 20px 0;
 				}
 
 			}
@@ -40,8 +43,28 @@
 			&.synthesis{
 				.description{
 					text-align: center;
-					line-height: 1.5;
 					letter-spacing: 0.02em;
+				}
+				.textlists{
+					list-style: none;
+					margin: 0 0 20px 0;
+					.textlist{
+						line-height: 2;
+						font-size:14px;
+					}
+				}
+			}
+			&.compounding{
+				.description{
+					text-align: center;
+				}
+				.textlists{
+					list-style: none;
+					margin:0 0 20px 0;
+					.textlist{
+						line-height: 2;
+						font-size:14px;
+					}
 				}
 			}
 		}

@@ -2,7 +2,6 @@ class Accordion
 	constructor:(accordion) ->
 		@accordion = accordion
 	init:() ->
-		console.log @accordion.length
 		i = 0
 		while i < @accordion.length
 			$(@accordion[i]).on 'click',this,@gnavClick
